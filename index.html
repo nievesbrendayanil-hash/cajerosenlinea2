@@ -1,177 +1,2611 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Equipo de Trabajo</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+<meta charset="UTF-8">
 
-<!-- Meta Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;
-n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
 
-fbq('init', '1363623855748473');
-fbq('track', 'PageView');
-</script>
+<meta name="theme-color" content="#07110d">
 
-<noscript>
-<img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1363623855748473&ev=PageView&noscript=1"/>
-</noscript>
-<!-- End Meta Pixel Code -->
+<title>
+Grupo MyB | Sumate al equipo
+</title>
+
+<meta
+name="description"
+content="Grupo MyB. Estamos online las 24 horas. Pedí información para conocer nuestra propuesta de trabajo.">
+
 
 <style>
-body {
-margin: 0;
-font-family: 'Inter', sans-serif;
-background: #000;
-display: flex;
-flex-direction: column;
-align-items: center;
-padding: 20px;
-color: #fff;
+
+
+/* ===================================
+COLORES GENERALES
+=================================== */
+
+:root{
+
+--verde:#20e47c;
+
+--verdeOscuro:#079451;
+
+--azul:#139cff;
+
+--violeta:#9457ff;
+
+--dorado:#ffd467;
+
+--blanco:#ffffff;
+
+--oscuro:#06100c;
+
+--gris:#b7c6bd;
+
 }
 
-.logo-text {
-color: #00e676;
-font-weight: 800;
-font-size: 28px;
-margin-top: 30px;
+
+/* ===================================
+CONFIGURACIÓN GENERAL
+=================================== */
+
+*{
+
+box-sizing:border-box;
+
+margin:0;
+
+padding:0;
+
 }
 
-.whatsapp-logo {
-width: 60px;
-margin: 10px 0;
+
+html{
+
+scroll-behavior:smooth;
+
 }
 
-.verified {
-text-align: center;
+
+body{
+
+font-family:
+Arial,
+Helvetica,
+sans-serif;
+
+color:white;
+
+min-height:100vh;
+
+overflow-x:hidden;
+
+
+/* FONDO GENERAL */
+
+background:
+
+linear-gradient(
+rgba(0,0,0,.72),
+rgba(0,0,0,.91)
+),
+
+radial-gradient(
+circle at 15% 15%,
+rgba(32,228,124,.22),
+transparent 35%
+),
+
+radial-gradient(
+circle at 85% 35%,
+rgba(148,87,255,.23),
+transparent 38%
+),
+
+radial-gradient(
+circle at 50% 85%,
+rgba(19,156,255,.12),
+transparent 40%
+),
+
+linear-gradient(
+135deg,
+#04110a,
+#10121a,
+#120b20
+);
+
+
+background-size:cover;
+
+background-position:center;
+
+background-repeat:no-repeat;
+
+background-attachment:fixed;
+
 }
 
-.verified .green {
-color: #00e676;
-font-weight: 700;
-font-size: 18px;
+
+/* ===================================
+EFECTO CASINO EN BACKGROUND
+=================================== */
+
+body::before{
+
+content:"♠  ♦  ♣  ♥   777";
+
+position:fixed;
+
+z-index:-1;
+
+top:25%;
+
+left:50%;
+
+transform:
+translate(-50%,-50%)
+rotate(-10deg);
+
+font-size:clamp(
+80px,
+15vw,
+220px
+);
+
+letter-spacing:35px;
+
+white-space:nowrap;
+
+color:white;
+
+opacity:.025;
+
+filter:blur(2px);
+
+pointer-events:none;
+
 }
 
-.message {
-background: #111;
-padding: 18px;
-border-radius: 12px;
-margin: 20px 0;
-text-align: center;
-border: 1px solid #00e676;
+
+/* ===================================
+CONTENEDOR
+=================================== */
+
+.container{
+
+width:92%;
+
+max-width:1180px;
+
+margin:auto;
+
 }
 
-.mensaje-bono {
-background: #0d3d2b;
-border: 1px solid #00e676;
-padding: 16px;
-border-radius: 10px;
-margin-bottom: 18px;
-font-weight: 600;
-text-align: center;
-color: #c8ffe1;
+
+/* ===================================
+HEADER
+=================================== */
+
+header{
+
+padding:
+
+22px
+15px
+12px;
+
+text-align:center;
+
 }
 
-.boton-verde {
-background: linear-gradient(135deg, #00e676, #1de9b6);
-color: #000;
-padding: 18px 30px;
-border-radius: 12px;
-font-weight: bold;
-text-decoration: none;
-font-size: 18px;
-margin-bottom: 15px;
-display: inline-block;
-text-align: center;
+
+.logo{
+
+display:inline-flex;
+
+flex-direction:column;
+
+align-items:center;
+
+justify-content:center;
+
 }
 
-.whatsapp-button {
-background: linear-gradient(135deg, #00c853, #00e676);
-color: #000;
-padding: 22px 36px;
-border-radius: 45px;
-font-weight: bold;
-text-decoration: none;
-font-size: 18px;
-box-shadow: 0 0 20px #00e676;
+
+.logo-circle{
+
+width:88px;
+
+height:88px;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+border-radius:25px;
+
+background:
+
+linear-gradient(
+135deg,
+#fff5c9,
+#ffd467,
+#b7811d
+);
+
+color:#10100c;
+
+font-size:27px;
+
+font-weight:1000;
+
+letter-spacing:-2px;
+
+box-shadow:
+
+0 0 15px
+rgba(255,212,103,.55),
+
+0 0 45px
+rgba(255,212,103,.18);
+
 }
 
-.cajeros {
-background-color: #00c853;
-color: #000;
-padding: 12px 22px;
-border-radius: 30px;
-font-weight: 600;
-margin: 18px 0;
-text-align: center;
+
+.logo h2{
+
+margin-top:11px;
+
+font-size:23px;
+
+letter-spacing:3px;
+
+font-weight:1000;
+
 }
 
-.footer {
-position: fixed;
-bottom: 0;
-width: 100%;
-background: #00c853;
-color: #000;
-text-align: center;
-padding: 14px;
-font-weight: bold;
+
+.logo p{
+
+margin-top:5px;
+
+font-size:11px;
+
+letter-spacing:2px;
+
+color:#afbeb5;
+
 }
+
+
+/* ===================================
+BANNER PRINCIPAL
+=================================== */
+
+.banner{
+
+position:relative;
+
+min-height:340px;
+
+margin-top:15px;
+
+border-radius:30px;
+
+overflow:hidden;
+
+display:flex;
+
+align-items:center;
+
+padding:50px;
+
+border:
+
+1px solid
+rgba(255,255,255,.12);
+
+box-shadow:
+
+0 25px
+60px
+rgba(0,0,0,.45);
+
+
+background:
+
+linear-gradient(
+90deg,
+rgba(0,0,0,.90),
+rgba(0,0,0,.35),
+rgba(0,0,0,.72)
+),
+
+radial-gradient(
+circle at 82% 30%,
+rgba(32,228,124,.35),
+transparent 25%
+),
+
+radial-gradient(
+circle at 80% 60%,
+rgba(148,87,255,.42),
+transparent 40%
+),
+
+linear-gradient(
+135deg,
+#073c27,
+#101b14,
+#281847
+);
+
+}
+
+
+/* ELEMENTOS DECORATIVOS BANNER */
+
+.banner::before{
+
+content:"777";
+
+position:absolute;
+
+right:7%;
+
+top:15%;
+
+font-size:
+
+clamp(
+80px,
+12vw,
+160px
+);
+
+font-weight:1000;
+
+color:white;
+
+opacity:.07;
+
+}
+
+
+.banner::after{
+
+content:"♠  ♦  ♣";
+
+position:absolute;
+
+right:8%;
+
+bottom:11%;
+
+font-size:
+
+clamp(
+35px,
+6vw,
+75px
+);
+
+letter-spacing:17px;
+
+color:white;
+
+opacity:.12;
+
+}
+
+
+.banner-text{
+
+position:relative;
+
+z-index:3;
+
+max-width:650px;
+
+}
+
+
+.small-title{
+
+font-size:12px;
+
+letter-spacing:3px;
+
+font-weight:1000;
+
+color:var(--dorado);
+
+margin-bottom:12px;
+
+}
+
+
+.banner h1{
+
+font-size:
+
+clamp(
+42px,
+7vw,
+76px
+);
+
+line-height:.95;
+
+letter-spacing:-3px;
+
+margin-bottom:18px;
+
+}
+
+
+.banner p{
+
+max-width:620px;
+
+font-size:18px;
+
+line-height:1.6;
+
+color:#d9e5dd;
+
+}
+
+
+/* ===================================
+GLASS EFFECT
+=================================== */
+
+.glass{
+
+position:relative;
+
+overflow:hidden;
+
+border:
+
+1px solid
+rgba(255,255,255,.13);
+
+border-radius:29px;
+
+background:
+
+linear-gradient(
+135deg,
+rgba(255,255,255,.095),
+rgba(255,255,255,.025)
+),
+
+rgba(6,18,13,.68);
+
+backdrop-filter:
+blur(17px);
+
+-webkit-backdrop-filter:
+blur(17px);
+
+box-shadow:
+
+0 25px
+60px
+rgba(0,0,0,.35);
+
+}
+
+
+/* LUZ SOBRE LOS CARDS */
+
+.glass::before{
+
+content:"";
+
+position:absolute;
+
+z-index:0;
+
+top:-120%;
+
+left:-70%;
+
+width:45%;
+
+height:330%;
+
+background:
+
+linear-gradient(
+100deg,
+transparent,
+rgba(255,255,255,.09),
+transparent
+);
+
+transform:rotate(18deg);
+
+animation:
+
+glassLight
+8s linear infinite;
+
+pointer-events:none;
+
+}
+
+
+@keyframes glassLight{
+
+0%{
+
+left:-70%;
+
+}
+
+100%{
+
+left:150%;
+
+}
+
+}
+
+
+/* ===================================
+HERO
+=================================== */
+
+.hero{
+
+margin-top:23px;
+
+padding:
+
+65px
+25px;
+
+text-align:center;
+
+}
+
+
+.hero > *{
+
+position:relative;
+
+z-index:2;
+
+}
+
+
+/* ===================================
+ETIQUETAS
+=================================== */
+
+.tags{
+
+display:flex;
+
+flex-wrap:wrap;
+
+justify-content:center;
+
+gap:9px;
+
+margin-bottom:26px;
+
+}
+
+
+.tags span{
+
+padding:
+
+9px
+15px;
+
+border-radius:100px;
+
+border:
+
+1px solid
+rgba(255,255,255,.12);
+
+background:
+
+rgba(255,255,255,.055);
+
+font-size:13px;
+
+font-weight:bold;
+
+color:#e3eee7;
+
+}
+
+
+/* ===================================
+TÍTULO PRINCIPAL
+=================================== */
+
+.hero h2{
+
+max-width:900px;
+
+margin:auto;
+
+font-size:
+
+clamp(
+42px,
+8vw,
+82px
+);
+
+line-height:.92;
+
+letter-spacing:-4px;
+
+}
+
+
+.hero-description{
+
+max-width:730px;
+
+margin:
+
+23px
+auto;
+
+font-size:
+
+clamp(
+16px,
+3vw,
+19px
+);
+
+line-height:1.65;
+
+color:#b9c9bf;
+
+}
+
+
+/* ===================================
+ESTRELLAS
+=================================== */
+
+.stars{
+
+color:var(--dorado);
+
+font-size:26px;
+
+letter-spacing:8px;
+
+margin:
+
+23px
+0;
+
+text-shadow:
+
+0 0
+20px
+rgba(255,212,103,.55);
+
+}
+
+
+/* ===================================
+FORMULARIO
+=================================== */
+
+.form{
+
+width:100%;
+
+max-width:630px;
+
+margin:auto;
+
+}
+
+
+.form label{
+
+display:block;
+
+text-align:left;
+
+margin:
+
+10px
+5px
+8px;
+
+font-size:14px;
+
+font-weight:bold;
+
+color:#e4eee8;
+
+}
+
+
+.form input{
+
+width:100%;
+
+height:60px;
+
+border-radius:17px;
+
+border:
+
+1px solid
+rgba(255,255,255,.16);
+
+outline:none;
+
+padding:
+
+0
+19px;
+
+font-size:16px;
+
+color:white;
+
+background:
+
+rgba(0,0,0,.43);
+
+transition:
+
+border .25s,
+box-shadow .25s,
+transform .25s;
+
+}
+
+
+.form input::placeholder{
+
+color:#75877c;
+
+}
+
+
+.form input:focus{
+
+border-color:
+
+rgba(32,228,124,.8);
+
+box-shadow:
+
+0 0 0
+4px
+rgba(32,228,124,.10);
+
+transform:
+translateY(-1px);
+
+}
+
+
+/* ===================================
+BOTÓN CTA
+=================================== */
+
+.cta{
+
+position:relative;
+
+isolation:isolate;
+
+overflow:hidden;
+
+width:100%;
+
+min-height:64px;
+
+margin-top:15px;
+
+border:none;
+
+border-radius:19px;
+
+padding:
+
+15px
+20px;
+
+cursor:pointer;
+
+font-size:
+
+clamp(
+15px,
+3vw,
+18px
+);
+
+font-weight:1000;
+
+letter-spacing:.4px;
+
+color:white;
+
+background:
+
+linear-gradient(
+110deg,
+#049552,
+#18dd79,
+#139cff
+);
+
+box-shadow:
+
+0 15px
+38px
+rgba(0,200,110,.30);
+
+animation:
+
+buttonPulse
+2.4s
+ease-in-out
+infinite;
+
+transition:
+
+transform .22s,
+filter .22s;
+
+}
+
+
+.cta:hover{
+
+transform:
+
+translateY(-3px)
+scale(1.015);
+
+filter:
+brightness(1.07);
+
+}
+
+
+.cta:active{
+
+transform:
+scale(.98);
+
+}
+
+
+/* BRILLO CTA */
+
+.cta::after{
+
+content:"";
+
+position:absolute;
+
+z-index:-1;
+
+top:-60%;
+
+left:-65%;
+
+width:34%;
+
+height:230%;
+
+background:
+
+linear-gradient(
+90deg,
+transparent,
+rgba(255,255,255,.68),
+transparent
+);
+
+transform:
+skewX(-20deg);
+
+animation:
+
+buttonShine
+2.8s
+ease-in-out
+infinite;
+
+}
+
+
+@keyframes buttonShine{
+
+0%,
+15%{
+
+left:-65%;
+
+}
+
+70%,
+100%{
+
+left:140%;
+
+}
+
+}
+
+
+@keyframes buttonPulse{
+
+0%,
+100%{
+
+box-shadow:
+
+0 15px
+38px
+rgba(0,200,110,.28);
+
+}
+
+50%{
+
+box-shadow:
+
+0 15px
+50px
+rgba(0,220,120,.58);
+
+}
+
+}
+
+
+.small-info{
+
+margin-top:12px;
+
+font-size:12px;
+
+line-height:1.5;
+
+color:#82968a;
+
+}
+
+
+/* ===================================
+BENEFICIOS
+=================================== */
+
+.features{
+
+display:grid;
+
+grid-template-columns:
+
+repeat(
+3,
+1fr
+);
+
+gap:16px;
+
+margin:
+
+25px
+0
+65px;
+
+}
+
+
+.feature{
+
+min-height:225px;
+
+padding:29px;
+
+}
+
+
+.feature > *{
+
+position:relative;
+
+z-index:2;
+
+}
+
+
+.icon{
+
+width:57px;
+
+height:57px;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+border-radius:17px;
+
+background:
+
+linear-gradient(
+135deg,
+var(--dorado),
+#fff4b7
+);
+
+color:#10100d;
+
+font-size:23px;
+
+font-weight:1000;
+
+box-shadow:
+
+0 10px
+25px
+rgba(255,212,103,.13);
+
+}
+
+
+.feature h3{
+
+margin:
+
+20px
+0
+10px;
+
+font-size:19px;
+
+}
+
+
+.feature p{
+
+font-size:15px;
+
+line-height:1.6;
+
+color:#a9bbb0;
+
+}
+
+
+/* ===================================
+SECCIÓN SLIDER
+=================================== */
+
+.slider-section{
+
+margin-bottom:75px;
+
+}
+
+
+.section-title{
+
+text-align:center;
+
+margin-bottom:27px;
+
+}
+
+
+.section-title h2{
+
+max-width:850px;
+
+margin:
+
+8px
+auto
+0;
+
+font-size:
+
+clamp(
+35px,
+6vw,
+60px
+);
+
+line-height:1;
+
+letter-spacing:-2px;
+
+}
+
+
+/* ===================================
+SLIDER
+=================================== */
+
+.slider{
+
+overflow:hidden;
+
+}
+
+
+.slider-track{
+
+display:flex;
+
+gap:16px;
+
+transition:
+
+transform
+.8s
+cubic-bezier(.2,.7,.2,1);
+
+will-change:transform;
+
+}
+
+
+.slide{
+
+position:relative;
+
+overflow:hidden;
+
+min-width:
+
+calc(
+50% - 8px
+);
+
+aspect-ratio:
+4 / 3;
+
+border-radius:25px;
+
+border:
+
+1px solid
+rgba(255,255,255,.12);
+
+box-shadow:
+
+0 18px
+40px
+rgba(0,0,0,.35);
+
+}
+
+
+.slide1{
+
+background:
+
+radial-gradient(
+circle at 30% 25%,
+rgba(32,228,124,.45),
+transparent 38%
+),
+
+linear-gradient(
+135deg,
+#083b28,
+#261845
+);
+
+}
+
+
+.slide2{
+
+background:
+
+radial-gradient(
+circle at 75% 20%,
+rgba(19,156,255,.40),
+transparent 36%
+),
+
+linear-gradient(
+135deg,
+#083a34,
+#142542
+);
+
+}
+
+
+.slide3{
+
+background:
+
+radial-gradient(
+circle at 45% 45%,
+rgba(148,87,255,.42),
+transparent 42%
+),
+
+linear-gradient(
+135deg,
+#231743,
+#063923
+);
+
+}
+
+
+.slide4{
+
+background:
+
+radial-gradient(
+circle at 65% 30%,
+rgba(255,212,103,.32),
+transparent 40%
+),
+
+linear-gradient(
+135deg,
+#0b372a,
+#321b50
+);
+
+}
+
+
+/* ELEMENTOS DEL SLIDER */
+
+.big-icon{
+
+position:absolute;
+
+top:43%;
+
+left:50%;
+
+transform:
+
+translate(-50%,-50%);
+
+font-size:
+
+clamp(
+60px,
+10vw,
+100px
+);
+
+opacity:.28;
+
+white-space:nowrap;
+
+}
+
+
+.caption{
+
+position:absolute;
+
+left:16px;
+
+right:16px;
+
+bottom:16px;
+
+padding:16px;
+
+border-radius:17px;
+
+background:
+
+rgba(0,0,0,.64);
+
+border:
+
+1px solid
+rgba(255,255,255,.09);
+
+backdrop-filter:
+blur(10px);
+
+-webkit-backdrop-filter:
+blur(10px);
+
+}
+
+
+.caption strong{
+
+display:block;
+
+margin-bottom:6px;
+
+font-size:16px;
+
+}
+
+
+.caption span{
+
+font-size:13px;
+
+line-height:1.5;
+
+color:#b8c7be;
+
+}
+
+
+/* ===================================
+NOTIFICACIONES DE REFERENCIAS
+=================================== */
+
+.notification{
+
+position:fixed;
+
+z-index:1000;
+
+top:18px;
+
+right:18px;
+
+width:345px;
+
+max-width:
+
+calc(
+100% - 36px
+);
+
+padding:
+
+16px
+17px;
+
+overflow:hidden;
+
+border-radius:18px;
+
+border:
+
+1px solid
+rgba(255,255,255,.15);
+
+background:
+
+linear-gradient(
+125deg,
+rgba(10,35,24,.97),
+rgba(26,17,45,.97)
+);
+
+box-shadow:
+
+0 18px
+50px
+rgba(0,0,0,.55);
+
+backdrop-filter:
+blur(15px);
+
+-webkit-backdrop-filter:
+blur(15px);
+
+opacity:0;
+
+transform:
+translateY(-150%);
+
+}
+
+
+/* BRILLO EN NOTIFICACIÓN */
+
+.notification::before{
+
+content:"";
+
+position:absolute;
+
+inset:0;
+
+background:
+
+linear-gradient(
+90deg,
+transparent,
+rgba(255,255,255,.08),
+transparent
+);
+
+background-size:
+220%
+100%;
+
+animation:
+
+notificationLight
+2.5s
+linear
+infinite;
+
+pointer-events:none;
+
+}
+
+
+@keyframes notificationLight{
+
+from{
+
+background-position:
+150% 0;
+
+}
+
+to{
+
+background-position:
+-100% 0;
+
+}
+
+}
+
+
+.notification.show{
+
+animation:
+
+notificationIn
+.55s
+forwards;
+
+}
+
+
+.notification.hide{
+
+animation:
+
+notificationOut
+.5s
+forwards;
+
+}
+
+
+.notification small{
+
+position:relative;
+
+z-index:2;
+
+display:block;
+
+margin-bottom:6px;
+
+font-size:10px;
+
+font-weight:1000;
+
+letter-spacing:2px;
+
+color:var(--dorado);
+
+}
+
+
+.notification p{
+
+position:relative;
+
+z-index:2;
+
+font-size:14px;
+
+line-height:1.45;
+
+color:#eef7f1;
+
+}
+
+
+@keyframes notificationIn{
+
+from{
+
+opacity:0;
+
+transform:
+
+translateY(-150%)
+scale(.96);
+
+}
+
+to{
+
+opacity:1;
+
+transform:
+
+translateY(0)
+scale(1);
+
+}
+
+}
+
+
+@keyframes notificationOut{
+
+from{
+
+opacity:1;
+
+transform:
+translateY(0);
+
+}
+
+to{
+
+opacity:0;
+
+transform:
+translateY(-150%);
+
+}
+
+}
+
+
+/* ===================================
+CTA FINAL
+=================================== */
+
+.final{
+
+max-width:870px;
+
+margin:
+
+0
+auto
+80px;
+
+padding:
+
+55px
+27px;
+
+text-align:center;
+
+}
+
+
+.final > *{
+
+position:relative;
+
+z-index:2;
+
+}
+
+
+.final h2{
+
+font-size:
+
+clamp(
+37px,
+6vw,
+62px
+);
+
+line-height:1;
+
+letter-spacing:-2px;
+
+margin:
+
+10px
+0
+15px;
+
+}
+
+
+.final p{
+
+max-width:650px;
+
+margin:
+
+0
+auto
+18px;
+
+line-height:1.6;
+
+color:#b3c5ba;
+
+}
+
+
+/* ===================================
+WHATSAPP FLOTANTE
+=================================== */
+
+.whatsapp-float{
+
+position:fixed;
+
+z-index:999;
+
+right:18px;
+
+bottom:18px;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+gap:9px;
+
+padding:
+
+11px
+17px
+11px
+12px;
+
+border-radius:100px;
+
+text-decoration:none;
+
+color:white;
+
+font-weight:1000;
+
+background:
+
+linear-gradient(
+135deg,
+#06a858,
+#24e67f
+);
+
+box-shadow:
+
+0 15px
+36px
+rgba(0,200,100,.43);
+
+animation:
+
+floatBounce
+2.3s
+ease-in-out
+infinite;
+
+}
+
+
+.whatsapp-symbol{
+
+width:36px;
+
+height:36px;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+border-radius:50%;
+
+font-size:22px;
+
+background:
+
+rgba(255,255,255,.15);
+
+}
+
+
+@keyframes floatBounce{
+
+0%,
+100%{
+
+transform:
+translateY(0);
+
+}
+
+50%{
+
+transform:
+translateY(-5px);
+
+}
+
+}
+
+
+/* ===================================
+FOOTER
+=================================== */
+
+footer{
+
+padding:
+
+37px
+20px
+40px;
+
+text-align:center;
+
+background:
+
+linear-gradient(
+135deg,
+#07713e,
+#10a95b
+);
+
+}
+
+
+footer p{
+
+font-size:17px;
+
+font-weight:bold;
+
+}
+
+
+footer small{
+
+display:block;
+
+max-width:850px;
+
+margin:
+
+10px
+auto
+0;
+
+font-size:12px;
+
+line-height:1.55;
+
+color:
+
+rgba(
+255,
+255,
+255,
+.78
+);
+
+}
+
+
+/* ===================================
+ANIMACIONES AL HACER SCROLL
+=================================== */
+
+.reveal{
+
+opacity:0;
+
+transform:
+translateY(28px);
+
+transition:
+
+opacity
+.8s ease,
+
+transform
+.8s ease;
+
+}
+
+
+.reveal.visible{
+
+opacity:1;
+
+transform:none;
+
+}
+
+
+/* ===================================
+RESPONSIVE TABLET
+=================================== */
+
+@media(
+max-width:820px
+){
+
+.features{
+
+grid-template-columns:
+1fr;
+
+}
+
+.feature{
+
+min-height:auto;
+
+}
+
+.banner{
+
+padding:
+
+38px
+23px;
+
+min-height:370px;
+
+}
+
+.slide{
+
+min-width:86%;
+
+}
+
+}
+
+
+/* ===================================
+RESPONSIVE CELULAR
+=================================== */
+
+@media(
+max-width:550px
+){
+
+.container{
+
+width:95%;
+
+}
+
+header{
+
+padding-top:14px;
+
+}
+
+.logo-circle{
+
+width:70px;
+
+height:70px;
+
+border-radius:20px;
+
+font-size:23px;
+
+}
+
+.logo h2{
+
+font-size:20px;
+
+}
+
+.banner{
+
+min-height:390px;
+
+padding:
+
+35px
+20px;
+
+border-radius:22px;
+
+}
+
+.banner h1{
+
+letter-spacing:-2px;
+
+}
+
+.hero{
+
+padding:
+
+40px
+17px;
+
+}
+
+.hero h2{
+
+font-size:
+
+clamp(
+40px,
+13vw,
+58px
+);
+
+letter-spacing:-3px;
+
+}
+
+.glass{
+
+border-radius:22px;
+
+}
+
+.stars{
+
+font-size:21px;
+
+letter-spacing:5px;
+
+}
+
+.slide{
+
+min-width:89%;
+
+border-radius:20px;
+
+}
+
+.notification{
+
+top:10px;
+
+right:10px;
+
+width:
+
+calc(
+100% - 20px
+);
+
+}
+
+.whatsapp-float{
+
+width:58px;
+
+height:58px;
+
+padding:0;
+
+}
+
+.whatsapp-float .text{
+
+display:none;
+
+}
+
+.whatsapp-symbol{
+
+background:none;
+
+}
+
+.final{
+
+padding:
+
+42px
+18px;
+
+margin-bottom:60px;
+
+}
+
+}
+
+
+/* ===================================
+ACCESIBILIDAD
+=================================== */
+
+@media(
+prefers-reduced-motion:
+reduce
+){
+
+*{
+
+animation-duration:
+.01ms !important;
+
+animation-iteration-count:
+1 !important;
+
+transition-duration:
+.01ms !important;
+
+}
+
+.reveal{
+
+opacity:1;
+
+transform:none;
+
+}
+
+}
+
+
 </style>
+
 </head>
+
 
 <body>
 
-<header>
-<div class="logo-text">💼 Equipo de Trabajo</div>
 
-<img class="whatsapp-logo"
-src="https://upload.wikimedia.org/wikipedia/commons/5/5e/WhatsApp_icon.png"
-alt="WhatsApp">
+
+<!-- ==================================
+NOTIFICACIONES SUPERIORES
+================================== -->
+
+<div
+class="notification"
+id="notification">
+
+<small>
+HISTORIAS DE LA RED
+</small>
+
+<p
+id="notificationText">
+
+Conocé algunas historias
+de personas que se acercaron
+a Grupo MyB.
+
+</p>
+
+</div>
+
+
+
+<!-- ==================================
+HEADER
+================================== -->
+
+<header
+class="reveal">
+
+<div
+class="logo">
+
+
+<div
+class="logo-circle">
+
+MyB
+
+</div>
+
+
+<h2>
+GRUPO MyB
+</h2>
+
+
+<p>
+RED DE TRABAJO ONLINE
+</p>
+
+
+</div>
+
 </header>
 
-<section class="verified">
-<h2>✅ Plataforma Verificada</h2>
-<p class="green">👋 BIENVENIDO A NUESTRO EQUIPO DE TRABAJO</p>
+
+
+<!-- ==================================
+CONTENIDO
+================================== -->
+
+<div
+class="container">
+
+
+
+<!-- ==================================
+BANNER
+================================== -->
+
+<section
+class="banner reveal">
+
+
+<div
+class="banner-text">
+
+
+<div
+class="small-title">
+
+GRUPO MyB
+
+</div>
+
+
+<h1>
+
+Te estamos
+esperando
+
+</h1>
+
+
+<p>
+
+Excelente grupo de trabajo.
+Conocé nuestra propuesta,
+nuestro sistema de trabajo
+y cómo podés formar parte
+de la red.
+
+</p>
+
+
+</div>
+
+
 </section>
 
-<div class="message">
-Te conectamos directamente con nuestro equipo por WhatsApp 📲
+
+
+<!-- ==================================
+SECCIÓN PRINCIPAL
+================================== -->
+
+<section
+class="hero glass reveal">
+
+
+<div
+class="tags">
+
+<span>
+Multipanel
+</span>
+
+<span>
+Fabicom
+</span>
+
+<span>
+Online 24 hs
+</span>
+
 </div>
 
-<div class="mensaje-bono">
-🚀 Oportunidad real de trabajo online<br>
-📍 Sin experiencia previa
+
+
+<div
+class="small-title">
+
+GRUPO MyB
+
 </div>
 
-<a class="boton-verde" href="#">
-¿Querés trabajar desde la comodidad de tu casa?
-</a>
 
-<a class="whatsapp-button"
-href="https://wa.me/5492664776266?text=Quiero%20info%20para%20ser%20cajero"
-target="_blank"
-onclick="fbq('trackCustom', 'ClickWhatsApp');">
-📲 QUIERO INFO PARA SER CAJERO
-</a>
 
-<div class="cajeros">
-👥 Más de 10.000 cajeros en todo el país
+<h2>
+
+Bienvenidos a
+nuestra plataforma
+
+</h2>
+
+
+
+<p
+class="hero-description">
+
+Estamos online las 24 horas.
+Pedí tu información para conocer
+cómo funciona nuestra propuesta
+y cómo sumarte al equipo de trabajo.
+
+</p>
+
+
+
+<!-- ESTRELLAS -->
+
+<div
+class="stars">
+
+★★★★★
+
 </div>
 
-<div class="footer">
-👋 BIENVENIDO A NUESTRO EQUIPO DE TRABAJO
+
+
+<!-- FORMULARIO -->
+
+<div
+class="form">
+
+
+<label
+for="nombre">
+
+¿Cómo te llamás?
+
+</label>
+
+
+
+<input
+
+type="text"
+
+id="nombre"
+
+name="nombre"
+
+placeholder="Escribí tu nombre"
+
+maxlength="40"
+
+autocomplete="name"
+
+>
+
+
+
+<button
+
+class="cta"
+
+onclick="enviarWhatsApp()">
+
+QUIERO INFO PARA SER CAJERO
+
+&nbsp; ✆
+
+</button>
+
+
+
+<p
+class="small-info">
+
+Al tocar el botón
+se abrirá automáticamente
+WhatsApp con un mensaje preparado
+con tu nombre.
+
+</p>
+
+
 </div>
 
-</body>
-</html>
+
+</section>
+
+
+
+<!-- ==================================
+BENEFICIOS
+================================== -->
+
+<section
+class="features reveal">
+
+
+
+<!-- BENEFICIO 1 -->
+
+<div
+class="feature glass">
+
+
+<div
+class="icon">
+
+⌂
+
+</div>
+
+
+<h3>
+
+Trabajá desde casa
+
+</h3>
+
+
+<p>
+
+Conocé una propuesta
+que podés gestionar
+desde tu casa utilizando
+principalmente tu celular.
+
+</p>
+
+
+</div>
+
+
+
+<!-- BENEFICIO 2 -->
+
+<div
+class="feature glass">
+
+
+<div
+class="icon">
+
+24
+
+</div>
+
+
+<h3>
+
+Online 24 horas
+
+</h3>
+
+
+<p>
+
+Contamos con comunicación
+y canales de información
+disponibles durante todo el día.
+
+</p>
+
+
+</div>
+
+
+
+<!-- BENEFICIO 3 -->
+
+<div
+class="feature glass">
+
+
+<div
+class="icon">
+
+★
+
+</div>
+
+
+<h3>
+
+Excelente grupo de trabajo
+
+</h3>
+
+
+<p>
+
+Una red basada en organización,
+comunicación y acompañamiento
+entre los integrantes.
+
+</p>
+
+
+</div>
+
+
+</section>
+
+
+
+<!-- ==================================
+SLIDER
+================================== -->
+
+<section
+class="slider-section reveal">
+
+
+<div
+class="section-title">
+
+
+<div
+class="small-title">
+
+CONOCÉ GRUPO MyB
+
+</div>
+
+
+<h2>
+
+Una propuesta
+pensada para vos
+
+</h2>
+
+
+</div>
+
+
+
+<div
+class="slider">
+
+
+<div
+class="slider-track"
+id="sliderTrack">
+
+
+
+<!-- SLIDE 1 -->
+
+<div
+class="slide slide1">
+
+
+<div
+class="big-icon">
+
+⌂ ♠
+
+</div>
+
+
+<div
+class="caption">
+
+
+<strong>
+
+Trabajá desde casa
+
+</strong>
+
+
+<span>
+
+Organizá tus tiempos
+y gestioná tus consultas.
+
+</span>
+
+
+</div>
+
+</div>
+
+
+
+<!-- SLIDE 2 -->
+
+<div
+class="slide slide2">
+
+
+<div
+class="big-icon">
+
+📱
+
+</div>
+
+
+<div
+class="caption">
+
+
+<strong>
+
+Todo desde tu celular
+
+</strong>
+
+
+<span>
+
+Comunicación simple,
+rápida y directa.
+
+</span>
+
+
+</div>
+
+</div>
+
+
+
+<!-- SLIDE 3 -->
+
+<div
+class="slide slide3">
+
+
+<div
+class="big-icon">
+
+★ ♣
+
+</div>
+
+
+<div
+class="caption">
+
+
+<strong>
+
+Formá tu equipo
+
+</strong>
+
+
+<span>
+
+Conocé la red
+y cómo organiz
