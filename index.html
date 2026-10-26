@@ -988,9 +988,7 @@ footer small{
 
 </head>
 
-
 <body>
-
 
 <noscript>
 
@@ -1002,7 +1000,6 @@ src="https://www.facebook.com/tr?id=1381019173497631&ev=PageView&noscript=1"
 alt="">
 
 </noscript>
-
 
 <header>
 
@@ -1024,19 +1021,15 @@ alt="">
 
 </header>
 
-
 <main class="container">
 
-
 <section class="hero card">
-
 
 <div class="badge">
 
 INCORPORACIÓN ABIERTA
 
 </div>
-
 
 <h1>
 
@@ -1045,7 +1038,6 @@ Buscamos
 para plataformas online
 
 </h1>
-
 
 <p class="hero-text">
 
@@ -1059,7 +1051,6 @@ y la modalidad de trabajo.
 
 </p>
 
-
 <div class="tags">
 
 <span>♠ Plataformas online</span>
@@ -1072,9 +1063,7 @@ y la modalidad de trabajo.
 
 </div>
 
-
 <div class="form-box">
-
 
 <label for="nombre">
 
@@ -1082,14 +1071,12 @@ y la modalidad de trabajo.
 
 </label>
 
-
 <input
 type="text"
 id="nombre"
 placeholder="Escribí tu nombre"
 maxlength="40"
 autocomplete="name">
-
 
 <button
 type="button"
@@ -1100,7 +1087,6 @@ onclick="enviarWhatsApp()">
 
 </button>
 
-
 <p class="small-info">
 
 Al tocar el botón
@@ -1109,15 +1095,11 @@ con un mensaje preparado.
 
 </p>
 
-
 </div>
-
 
 </section>
 
-
 <section class="section">
-
 
 <div class="section-title">
 
@@ -1131,9 +1113,7 @@ GRUPO MyB
 
 </div>
 
-
 <div class="features">
-
 
 <div class="feature card">
 
@@ -1155,7 +1135,6 @@ y seguimiento de usuarios.
 
 </div>
 
-
 <div class="feature card">
 
 <div class="feature-icon">
@@ -1174,7 +1153,6 @@ dentro de las plataformas online.
 </p>
 
 </div>
-
 
 <div class="feature card">
 
@@ -1196,12 +1174,9 @@ o computadora.
 
 </div>
 
-
 </div>
 
-
 <div class="details">
-
 
 <div class="detail card">
 
@@ -1225,7 +1200,6 @@ te explicamos el funcionamiento.
 
 </div>
 
-
 <div class="detail card">
 
 <div class="detail-symbol">
@@ -1245,7 +1219,6 @@ y depende de la actividad realizada.
 </p>
 
 </div>
-
 
 <div class="detail card">
 
@@ -1267,7 +1240,6 @@ y acompañamiento del equipo.
 
 </div>
 
-
 <div class="detail card">
 
 <div class="detail-symbol">
@@ -1288,12 +1260,9 @@ de entretenimiento.
 
 </div>
 
-
 </div>
 
-
 </section>
-
 
 <section class="final card">
 
@@ -1303,13 +1272,11 @@ GRUPO MyB
 
 </div>
 
-
 <h2>
 
 ¿Querés conocer más?
 
 </h2>
-
 
 <p>
 
@@ -1321,7 +1288,6 @@ y requisitos.
 
 </p>
 
-
 <button
 type="button"
 class="cta"
@@ -1331,12 +1297,9 @@ onclick="enviarWhatsApp()">
 
 </button>
 
-
 </section>
 
-
 </main>
-
 
 <a
 href="#"
@@ -1351,7 +1314,6 @@ aria-label="Contactar por WhatsApp">
 WhatsApp
 
 </a>
-
 
 <footer>
 
@@ -1370,25 +1332,21 @@ con plataformas online.
 
 </footer>
 
-
 <script>
-
 
 /*
 =========================================
 WHATSAPP
 
 NÚMERO:
-2664651893
+3765295054
 
 FORMATO INTERNACIONAL:
-5492664651893
+5493765295054
 =========================================
 */
 
-
-const WHATSAPP_NUMBER = "5492664651893";
-
+const WHATSAPP_NUMBER = "5493765295054";
 
 function registrarClickWhatsApp(){
 
@@ -1410,7 +1368,6 @@ function registrarClickWhatsApp(){
 
 }
 
-
 function crearWhatsAppUrl(
     mensaje
 ){
@@ -1431,14 +1388,12 @@ function crearWhatsAppUrl(
 
 }
 
-
 function enviarWhatsApp(){
 
     const campoNombre =
     document.getElementById(
         "nombre"
     );
-
 
     const nombre =
     campoNombre
@@ -1447,9 +1402,7 @@ function enviarWhatsApp(){
     :
     "";
 
-
     let mensaje;
-
 
     if(nombre){
 
@@ -1471,15 +1424,12 @@ function enviarWhatsApp(){
 
     }
 
-
     registrarClickWhatsApp();
-
 
     const url =
     crearWhatsAppUrl(
         mensaje
     );
-
 
     window.open(
         url,
@@ -1487,7 +1437,6 @@ function enviarWhatsApp(){
     );
 
 }
-
 
 function enviarWhatsAppFlotante(
     event
@@ -1495,20 +1444,16 @@ function enviarWhatsAppFlotante(
 
     event.preventDefault();
 
-
     const mensaje =
 
     "Hola, quiero información para ser cajero/a de Grupo MyB.";
 
-
     registrarClickWhatsApp();
-
 
     const url =
     crearWhatsAppUrl(
         mensaje
     );
-
 
     window.open(
         url,
@@ -1517,9 +1462,7 @@ function enviarWhatsAppFlotante(
 
 }
 
-
 </script>
-
 
 </body>
 
