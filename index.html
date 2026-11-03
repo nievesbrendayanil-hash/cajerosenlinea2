@@ -1,1164 +1,519 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-
-<meta charset="UTF-8">
-
-<meta
-name="viewport"
-content="width=device-width, initial-scale=1.0">
-
-<meta
-name="theme-color"
-content="#050807">
-
-<title>Grupo MyB | Cajeros para plataformas online</title>
-
-<meta
-name="description"
-content="Grupo MyB incorpora cajeros y cajeras para plataformas online. Conocé la modalidad, requisitos y funcionamiento.">
-
-
-<!-- =========================================
-META PIXEL NUEVO
-ID: 2187878551800908
-========================================= -->
-
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-
-fbq('init', '2187878551800908');
-fbq('track', 'PageView');
-</script>
-
-<!-- FIN META PIXEL -->
-
-
-<style>
-
-:root{
-
-    --verde:#24e77e;
-    --verde2:#069652;
-    --dorado:#ffd36a;
-    --violeta:#9d65ff;
-    --azul:#38a9ff;
-
-    --fondo:#030504;
-    --fondo2:#07120d;
-
-    --blanco:#ffffff;
-    --gris:#b8c5bd;
-    --gris2:#829087;
-
-}
-
-*{
-
-    box-sizing:border-box;
-    margin:0;
-    padding:0;
-
-}
-
-html{
-
-    scroll-behavior:smooth;
-
-}
-
-body{
-
-    margin:0;
-    min-height:100vh;
-
-    font-family:
-    Arial,
-    Helvetica,
-    sans-serif;
-
-    color:white;
-    overflow-x:hidden;
-
-    background:
-
-    radial-gradient(
-        circle at 12% 10%,
-        rgba(36,231,126,.17),
-        transparent 28%
-    ),
-
-    radial-gradient(
-        circle at 90% 28%,
-        rgba(157,101,255,.17),
-        transparent 30%
-    ),
-
-    radial-gradient(
-        circle at 50% 90%,
-        rgba(56,169,255,.08),
-        transparent 32%
-    ),
-
-    linear-gradient(
-        160deg,
-        #020403,
-        #07110d 55%,
-        #080510
-    );
-
-}
-
-body::before{
-
-    content:"♠   ♦   ♣   ♥   777";
-
-    position:fixed;
-    z-index:-1;
-
-    left:50%;
-    top:20%;
-
-    transform:
-    translateX(-50%)
-    rotate(-8deg);
-
-    white-space:nowrap;
-
-    font-size:
-    clamp(70px,14vw,180px);
-
-    font-weight:bold;
-    letter-spacing:20px;
-
-    color:white;
-    opacity:.025;
-
-    pointer-events:none;
-
-}
-
-.container{
-
-    width:92%;
-    max-width:1080px;
-    margin:auto;
-
-}
-
-.card{
-
-    border:
-    1px solid
-    rgba(255,255,255,.11);
-
-    background:
-    rgba(255,255,255,.045);
-
-    border-radius:24px;
-
-    box-shadow:
-    0 20px 50px
-    rgba(0,0,0,.30);
-
-}
-
-header{
-
-    text-align:center;
-
-    padding:
-    28px 15px 20px;
-
-}
-
-.logo-box{
-
-    display:inline-flex;
-    flex-direction:column;
-    align-items:center;
-
-}
-
-.logo{
-
-    width:76px;
-    height:76px;
-
-    display:flex;
-    align-items:center;
-    justify-content:center;
-
-    border-radius:22px;
-
-    background:
-    linear-gradient(
-        135deg,
-        #fff1b8,
-        var(--dorado),
-        #b17a15
-    );
-
-    color:#111;
-    font-size:24px;
-    font-weight:900;
-
-    box-shadow:
-    0 0 28px
-    rgba(255,211,106,.28);
-
-}
-
-.logo-name{
-
-    margin-top:12px;
-    font-size:22px;
-    font-weight:900;
-    letter-spacing:2px;
-
-}
-
-.logo-subtitle{
-
-    margin-top:5px;
-    font-size:11px;
-    color:#91a098;
-    letter-spacing:2px;
-
-}
-
-.hero{
-
-    position:relative;
-    overflow:hidden;
-    text-align:center;
-
-    padding:60px 24px;
-    margin-top:10px;
-
-}
-
-.hero::after{
-
-    content:"777";
-
-    position:absolute;
-    right:-15px;
-    top:10px;
-
-    font-size:140px;
-    font-weight:900;
-    color:white;
-    opacity:.025;
-
-}
-
-.badge{
-
-    display:inline-block;
-
-    margin-bottom:20px;
-    padding:9px 15px;
-
-    border-radius:50px;
-
-    font-size:12px;
-    font-weight:bold;
-    letter-spacing:1.5px;
-
-    color:var(--dorado);
-
-    background:
-    rgba(255,211,106,.07);
-
-    border:
-    1px solid
-    rgba(255,211,106,.25);
-
-}
-
-.hero h1{
-
-    position:relative;
-    z-index:2;
-
-    max-width:850px;
-    margin:auto;
-
-    font-size:
-    clamp(42px,8vw,76px);
-
-    line-height:.95;
-    letter-spacing:-3px;
-
-}
-
-.hero h1 span{
-
-    color:var(--verde);
-
-}
-
-.hero-text{
-
-    position:relative;
-    z-index:2;
-
-    max-width:720px;
-    margin:24px auto 0;
-
-    color:#c4d1c9;
-
-    font-size:
-    clamp(16px,2.5vw,18px);
-
-    line-height:1.65;
-
-}
-
-.tags{
-
-    position:relative;
-    z-index:2;
-
-    display:flex;
-    justify-content:center;
-    flex-wrap:wrap;
-
-    gap:8px;
-    margin-top:25px;
-
-}
-
-.tags span{
-
-    padding:8px 14px;
-
-    border-radius:40px;
-
-    background:
-    rgba(255,255,255,.05);
-
-    border:
-    1px solid
-    rgba(255,255,255,.09);
-
-    color:#d9e5dd;
-    font-size:12px;
-
-}
-
-.form-box{
-
-    position:relative;
-    z-index:2;
-
-    max-width:630px;
-    margin:35px auto 0;
-
-    padding:24px;
-
-    border-radius:22px;
-
-    background:
-    rgba(0,0,0,.28);
-
-    border:
-    1px solid
-    rgba(36,231,126,.18);
-
-}
-
-.form-box label{
-
-    display:block;
-    text-align:left;
-
-    font-size:14px;
-    font-weight:bold;
-
-    margin-bottom:8px;
-
-}
-
-.form-box input{
-
-    width:100%;
-    height:58px;
-
-    border:
-    1px solid
-    rgba(255,255,255,.14);
-
-    border-radius:15px;
-    outline:none;
-
-    color:white;
-
-    background:
-    rgba(0,0,0,.48);
-
-    padding:0 18px;
-    font-size:16px;
-
-}
-
-.form-box input:focus{
-
-    border-color:var(--verde);
-
-    box-shadow:
-    0 0 0 3px
-    rgba(36,231,126,.10);
-
-}
-
-.form-box input::placeholder{
-
-    color:#758079;
-
-}
-
-.cta{
-
-    width:100%;
-
-    display:flex;
-    align-items:center;
-    justify-content:center;
-
-    min-height:62px;
-    margin-top:14px;
-
-    padding:14px 18px;
-
-    border:0;
-    border-radius:17px;
-
-    color:white;
-
-    font-size:
-    clamp(15px,2.8vw,18px);
-
-    font-weight:900;
-    cursor:pointer;
-    text-decoration:none;
-
-    background:
-    linear-gradient(
-        120deg,
-        #079653,
-        #22df7d,
-        #159de7
-    );
-
-    box-shadow:
-    0 12px 35px
-    rgba(0,210,110,.25);
-
-}
-
-.cta:hover{
-
-    filter:brightness(1.07);
-
-}
-
-.small-info{
-
-    margin-top:12px;
-
-    color:#849189;
-    font-size:12px;
-    line-height:1.5;
-
-}
-
-.section{
-
-    margin-top:30px;
-
-}
-
-.section-title{
-
-    text-align:center;
-    margin-bottom:22px;
-
-}
-
-.section-title small{
-
-    display:block;
-
-    color:var(--dorado);
-    font-weight:bold;
-    letter-spacing:2px;
-
-    margin-bottom:8px;
-
-}
-
-.section-title h2{
-
-    font-size:
-    clamp(32px,6vw,50px);
-
-    letter-spacing:-2px;
-
-}
-
-.features{
-
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:15px;
-
-}
-
-.feature{
-
-    padding:26px;
-
-}
-
-.feature-icon{
-
-    width:52px;
-    height:52px;
-
-    display:flex;
-    align-items:center;
-    justify-content:center;
-
-    border-radius:15px;
-    margin-bottom:17px;
-
-    font-size:23px;
-    color:#111;
-
-    background:
-    linear-gradient(
-        135deg,
-        var(--dorado),
-        #fff1ae
-    );
-
-}
-
-.feature h3{
-
-    margin-bottom:9px;
-    font-size:18px;
-
-}
-
-.feature p{
-
-    font-size:14px;
-    line-height:1.6;
-    color:#9fb0a5;
-
-}
-
-.details{
-
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-
-    gap:15px;
-    margin-top:15px;
-
-}
-
-.detail{
-
-    padding:28px;
-
-}
-
-.detail-symbol{
-
-    font-size:42px;
-    margin-bottom:15px;
-
-}
-
-.detail h3{
-
-    font-size:20px;
-    margin-bottom:8px;
-
-}
-
-.detail p{
-
-    color:#a8b7ae;
-    line-height:1.65;
-    font-size:14px;
-
-}
-
-.final{
-
-    text-align:center;
-
-    margin:35px 0 80px;
-    padding:45px 25px;
-
-}
-
-.final h2{
-
-    font-size:
-    clamp(32px,6vw,50px);
-
-    margin-bottom:14px;
-
-}
-
-.final p{
-
-    max-width:650px;
-    margin:0 auto 22px;
-
-    color:#adbbb2;
-    line-height:1.6;
-
-}
-
-.final .cta{
-
-    max-width:600px;
-    margin:0 auto;
-
-}
-
-.whatsapp-float{
-
-    position:fixed;
-
-    right:18px;
-    bottom:18px;
-    z-index:100;
-
-    display:flex;
-    align-items:center;
-    justify-content:center;
-
-    gap:8px;
-    padding:13px 18px;
-
-    border-radius:50px;
-    text-decoration:none;
-
-    color:#06150c;
-
-    background:
-    linear-gradient(
-        135deg,
-        #1edb76,
-        #61f3a2
-    );
-
-    font-weight:900;
-
-    box-shadow:
-    0 10px 30px
-    rgba(0,220,115,.30);
-
-}
-
-footer{
-
-    text-align:center;
-
-    padding:35px 20px;
-
-    border-top:
-    1px solid
-    rgba(255,255,255,.08);
-
-    background:
-    rgba(0,0,0,.25);
-
-}
-
-footer strong{
-
-    display:block;
-    font-size:18px;
-    margin-bottom:8px;
-
-}
-
-footer small{
-
-    color:#829087;
-    line-height:1.6;
-
-}
-
-@media(max-width:800px){
-
-    .features{
-
-        grid-template-columns:1fr;
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grupo MyB | Cajeros para plataformas online</title>
+  <meta name="description" content="Grupo MyB. Incorporación de cajeros y cajeras para plataformas online. Consultá los requisitos y la modalidad de trabajo.">
+
+  <!-- Meta Pixel Code -->
+  <script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '1703128171354048');
+  fbq('track', 'PageView');
+  </script>
+  <!-- End Meta Pixel Code -->
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
 
-    .details{
-
-        grid-template-columns:1fr;
-
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #080d0c;
+      color: #ffffff;
+      line-height: 1.6;
     }
 
-}
-
-@media(max-width:550px){
-
-    .container{
-
-        width:94%;
-
+    .container {
+      width: 90%;
+      max-width: 1100px;
+      margin: auto;
     }
 
-    .logo{
-
-        width:65px;
-        height:65px;
-        font-size:21px;
-
+    header {
+      padding: 22px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      background: #080d0c;
     }
 
-    .hero{
-
-        padding:40px 16px;
-        border-radius:20px;
-
+    .logo {
+      font-size: 27px;
+      font-weight: 900;
+      letter-spacing: 2px;
+      color: #d9b45b;
+      text-align: center;
     }
 
-    .hero h1{
-
-        font-size:
-        clamp(40px,12vw,56px);
-
-        letter-spacing:-2px;
-
+    .logo span {
+      color: #ffffff;
     }
 
-    .form-box{
-
-        padding:18px 14px;
-
+    .hero {
+      padding: 65px 0 55px;
+      background:
+        radial-gradient(circle at 80% 20%, rgba(25,120,75,0.22), transparent 35%),
+        radial-gradient(circle at 15% 80%, rgba(116,62,155,0.15), transparent 35%),
+        linear-gradient(135deg, #101a16, #080d0c 70%);
+      text-align: center;
     }
 
-    .feature{
-
-        padding:22px;
-
+    .badge {
+      display: inline-block;
+      padding: 8px 18px;
+      border: 1px solid #d9b45b;
+      border-radius: 30px;
+      color: #e6c56e;
+      font-size: 12px;
+      font-weight: bold;
+      letter-spacing: 2px;
+      margin-bottom: 22px;
     }
 
-    .detail{
-
-        padding:23px;
-
+    h1 {
+      font-size: clamp(32px, 5vw, 52px);
+      line-height: 1.15;
+      margin-bottom: 20px;
+      font-weight: 900;
     }
 
-    .whatsapp-float{
-
-        width:58px;
-        height:58px;
-
-        padding:0;
-        font-size:0;
-
+    h1 span {
+      color: #d9b45b;
     }
 
-    .whatsapp-float span{
-
-        font-size:24px;
-
+    .hero-text {
+      max-width: 720px;
+      margin: 0 auto 28px;
+      color: #c5ceca;
+      font-size: 17px;
     }
 
-}
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin: 25px 0 32px;
+    }
 
-</style>
+    .tag {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 30px;
+      padding: 9px 15px;
+      font-size: 13px;
+      color: #e5e5e5;
+    }
 
+    .form-box {
+      max-width: 440px;
+      margin: 30px auto 0;
+      padding: 28px;
+      background: rgba(255,255,255,0.055);
+      border: 1px solid rgba(217,180,91,0.35);
+      border-radius: 18px;
+      box-shadow: 0 15px 45px rgba(0,0,0,0.3);
+    }
+
+    .form-box h2 {
+      font-size: 22px;
+      margin-bottom: 8px;
+    }
+
+    .form-box p {
+      color: #b9c2bd;
+      font-size: 14px;
+      margin-bottom: 18px;
+    }
+
+    input {
+      width: 100%;
+      padding: 15px;
+      border-radius: 9px;
+      border: 1px solid #39463f;
+      background: #111b16;
+      color: #ffffff;
+      font-size: 15px;
+      margin-bottom: 15px;
+      outline: none;
+    }
+
+    input:focus {
+      border-color: #d9b45b;
+    }
+
+    .btn {
+      display: inline-block;
+      width: 100%;
+      padding: 16px 20px;
+      border: none;
+      border-radius: 10px;
+      background: linear-gradient(135deg, #e6c56e, #b78b36);
+      color: #10130f;
+      font-size: 15px;
+      font-weight: 900;
+      text-decoration: none;
+      text-align: center;
+      cursor: pointer;
+      box-shadow: 0 7px 22px rgba(217,180,91,0.2);
+      transition: 0.25s;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      filter: brightness(1.1);
+    }
+
+    .section {
+      padding: 60px 0;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 30px;
+      margin-bottom: 15px;
+    }
+
+    .section-subtitle {
+      text-align: center;
+      max-width: 650px;
+      margin: 0 auto 35px;
+      color: #aeb9b3;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 18px;
+    }
+
+    .card {
+      padding: 25px;
+      border-radius: 15px;
+      background: linear-gradient(145deg, #14221a, #0d1511);
+      border: 1px solid rgba(255,255,255,0.09);
+      transition: 0.25s;
+    }
+
+    .card:hover {
+      border-color: rgba(217,180,91,0.55);
+      transform: translateY(-4px);
+    }
+
+    .card .icon {
+      font-size: 29px;
+      margin-bottom: 12px;
+    }
+
+    .card h3 {
+      color: #e5c46e;
+      font-size: 18px;
+      margin-bottom: 9px;
+    }
+
+    .card p {
+      color: #b9c3bd;
+      font-size: 14px;
+    }
+
+    .highlight {
+      background:
+        radial-gradient(circle at center, rgba(25,120,75,0.18), transparent 65%),
+        #0d1511;
+      border-top: 1px solid rgba(255,255,255,0.06);
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+      text-align: center;
+    }
+
+    .highlight h2 {
+      font-size: 30px;
+      margin-bottom: 15px;
+    }
+
+    .highlight p {
+      color: #bac5be;
+      max-width: 680px;
+      margin: 0 auto 25px;
+    }
+
+    .highlight .btn {
+      max-width: 340px;
+    }
+
+    footer {
+      padding: 25px 0;
+      text-align: center;
+      color: #7e8982;
+      font-size: 12px;
+      background: #060a08;
+    }
+
+    .whatsapp-float {
+      position: fixed;
+      width: 58px;
+      height: 58px;
+      right: 20px;
+      bottom: 20px;
+      z-index: 1000;
+      border-radius: 50%;
+      background: #20c66b;
+      color: #ffffff;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 29px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.4);
+      transition: 0.2s;
+    }
+
+    .whatsapp-float:hover {
+      transform: scale(1.08);
+    }
+
+    @media (max-width: 600px) {
+      .hero {
+        padding: 48px 0;
+      }
+
+      .form-box {
+        padding: 22px;
+      }
+
+      .section {
+        padding: 45px 0;
+      }
+
+      .section-title,
+      .highlight h2 {
+        font-size: 25px;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-<!-- META PIXEL: VERSIÓN SIN JAVASCRIPT -->
-<noscript>
-<img
-height="1"
-width="1"
-style="display:none"
-src="https://www.facebook.com/tr?id=2187878551800908&ev=PageView&noscript=1"
-alt="">
-</noscript>
+  <!-- Meta Pixel Code - NoScript -->
+  <noscript>
+    <img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1703128171354048&ev=PageView&noscript=1"/>
+  </noscript>
 
-<header>
-
-<div class="logo-box">
-
-    <div class="logo">
-        MyB
+  <header>
+    <div class="container">
+      <div class="logo">GRUPO <span>MyB</span></div>
     </div>
+  </header>
 
-    <div class="logo-name">
-        GRUPO MyB
+  <main>
+
+    <section class="hero">
+      <div class="container">
+
+        <div class="badge">INCORPORACIÓN ABIERTA</div>
+
+        <h1>
+          Buscamos <span>cajeros/as</span><br>
+          para plataformas online
+        </h1>
+
+        <p class="hero-text">
+          Estamos incorporando personas para tareas de atención y gestión
+          de usuarios dentro de plataformas online. Conocé cómo funciona,
+          los requisitos y la modalidad de trabajo.
+        </p>
+
+        <div class="tags">
+          <div class="tag">♠ Plataformas online</div>
+          <div class="tag">📱 Gestión digital</div>
+          <div class="tag">💬 Atención a usuarios</div>
+          <div class="tag">↕ Cargas y retiros</div>
+        </div>
+
+        <div class="form-box">
+          <h2>¡Queremos conocerte!</h2>
+          <p>Dejanos tu nombre y recibí más información por WhatsApp.</p>
+
+          <form id="contactForm">
+            <input
+              type="text"
+              id="nombre"
+              placeholder="Escribí tu nombre"
+              autocomplete="name"
+              required
+            >
+
+            <button type="submit" class="btn">
+              📲 QUIERO INFORMACIÓN
+            </button>
+          </form>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+
+        <h2 class="section-title">¿Qué tareas se realizan?</h2>
+
+        <p class="section-subtitle">
+          Conocé las principales funciones y características de la actividad.
+        </p>
+
+        <div class="cards">
+
+          <div class="card">
+            <div class="icon">💬</div>
+            <h3>Atención a usuarios</h3>
+            <p>
+              Comunicación y asistencia a usuarios mediante canales digitales.
+            </p>
+          </div>
+
+          <div class="card">
+            <div class="icon">💳</div>
+            <h3>Cargas y retiros</h3>
+            <p>
+              Gestión y seguimiento de operaciones según los procedimientos
+              establecidos.
+            </p>
+          </div>
+
+          <div class="card">
+            <div class="icon">📱</div>
+            <h3>Trabajo remoto</h3>
+            <p>
+              Actividad que se desarrolla desde el celular o la computadora.
+            </p>
+          </div>
+
+          <div class="card">
+            <div class="icon">⭐</div>
+            <h3>Con o sin experiencia</h3>
+            <p>
+              Consultá las condiciones de incorporación y el acompañamiento
+              disponible.
+            </p>
+          </div>
+
+          <div class="card">
+            <div class="icon">📊</div>
+            <h3>Modalidad por comisión</h3>
+            <p>
+              La modalidad de ingresos se informa al momento de recibir
+              los detalles de la actividad.
+            </p>
+          </div>
+
+          <div class="card">
+            <div class="icon">🤝</div>
+            <h3>Capacitación y soporte</h3>
+            <p>
+              Recibí orientación para conocer el funcionamiento de las tareas
+              y los procedimientos.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="section highlight">
+      <div class="container">
+
+        <h2>¿Querés conocer más?</h2>
+
+        <p>
+          Escribinos por WhatsApp y recibí información sobre la modalidad,
+          los requisitos y las condiciones de incorporación.
+        </p>
+
+        <a
+          href="https://wa.me/5492664651893"
+          class="btn whatsapp-link"
+          target="_blank"
+          rel="noopener"
+        >
+          📲 PEDIR INFORMACIÓN POR WHATSAPP
+        </a>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container">
+      © 2026 Grupo MyB. Todos los derechos reservados.
     </div>
-
-    <div class="logo-subtitle">
-        PLATAFORMAS ONLINE
-    </div>
-
-</div>
-
-</header>
-
-<main class="container">
-
-<section class="hero card">
-
-<div class="badge">
-INCORPORACIÓN ABIERTA
-</div>
-
-<h1>
-Buscamos
-<span>cajeros/as</span>
-para plataformas online
-</h1>
-
-<p class="hero-text">
-Estamos incorporando personas
-para tareas de atención y gestión
-de usuarios dentro de plataformas online.
-
-Conocé cómo funciona,
-los requisitos
-y la modalidad de trabajo.
-</p>
-
-<div class="tags">
-
-<span>♠ Plataformas online</span>
-<span>📱 Gestión digital</span>
-<span>💬 Atención a usuarios</span>
-<span>↕ Cargas y retiros</span>
-
-</div>
-
-<div class="form-box">
-
-<label for="nombre">
-¿Cómo te llamás?
-</label>
-
-<input
-type="text"
-id="nombre"
-placeholder="Escribí tu nombre"
-maxlength="40"
-autocomplete="name">
-
-<button
-type="button"
-class="cta"
-onclick="enviarWhatsApp()">
-📲 QUIERO INFORMACIÓN
-</button>
-
-<p class="small-info">
-Al tocar el botón
-se abrirá WhatsApp
-con un mensaje preparado.
-</p>
-
-</div>
-
-</section>
-
-<section class="section">
-
-<div class="section-title">
-
-<small>GRUPO MyB</small>
-
-<h2>¿En qué consiste?</h2>
-
-</div>
-
-<div class="features">
-
-<div class="feature card">
-
-<div class="feature-icon">💬</div>
-
-<h3>Atención a usuarios</h3>
-
-<p>
-Comunicación,
-consultas
-y seguimiento de usuarios.
-</p>
-
-</div>
-
-<div class="feature card">
-
-<div class="feature-icon">↕</div>
-
-<h3>Cargas y retiros</h3>
-
-<p>
-Gestión operativa
-dentro de las plataformas online.
-</p>
-
-</div>
-
-<div class="feature card">
-
-<div class="feature-icon">⌂</div>
-
-<h3>Trabajo remoto</h3>
-
-<p>
-La actividad puede gestionarse
-principalmente desde celular
-o computadora.
-</p>
-
-</div>
-
-</div>
-
-<div class="details">
-
-<div class="detail card">
-
-<div class="detail-symbol">🎓</div>
-
-<h3>Con o sin experiencia</h3>
-
-<p>
-Si ya conocés el rubro,
-podés consultar.
-
-Si todavía no tenés experiencia,
-te explicamos el funcionamiento.
-</p>
-
-</div>
-
-<div class="detail card">
-
-<div class="detail-symbol">%</div>
-
-<h3>Modalidad por comisión</h3>
-
-<p>
-La modalidad de ingreso
-es variable
-y depende de la actividad realizada.
-</p>
-
-</div>
-
-<div class="detail card">
-
-<div class="detail-symbol">🎧</div>
-
-<h3>Capacitación y soporte</h3>
-
-<p>
-Recibís información
-sobre el funcionamiento
-y acompañamiento del equipo.
-</p>
-
-</div>
-
-<div class="detail card">
-
-<div class="detail-symbol">♠ ♦</div>
-
-<h3>Entretenimiento online</h3>
-
-<p>
-Actividad relacionada
-con plataformas digitales
-de entretenimiento.
-</p>
-
-</div>
-
-</div>
-
-</section>
-
-<section class="final card">
-
-<div class="badge">GRUPO MyB</div>
-
-<h2>¿Querés conocer más?</h2>
-
-<p>
-Escribinos por WhatsApp
-para recibir información
-sobre tareas,
-modalidad
-y requisitos.
-</p>
-
-<button
-type="button"
-class="cta"
-onclick="enviarWhatsApp()">
-📲 PEDIR INFORMACIÓN POR WHATSAPP
-</button>
-
-</section>
-
-</main>
-
-<a
-href="#"
-class="whatsapp-float"
-onclick="enviarWhatsAppFlotante(event)"
-aria-label="Contactar por WhatsApp">
-
-<span>☎</span>
-WhatsApp
-
-</a>
-
-<footer>
-
-<strong>GRUPO MyB</strong>
-
-<small>
-Información para personas
-interesadas en conocer
-nuestra modalidad de trabajo
-con plataformas online.
-</small>
-
-</footer>
-
-<script>
-
-/*
-=========================================
-WHATSAPP
-
-NÚMERO LOCAL:
-2664651893
-
-FORMATO INTERNACIONAL:
-5492664651893
-=========================================
-*/
-
-const WHATSAPP_NUMBER = "5492664651893";
-
-
-/*
-=========================================
-SEGUIMIENTO DE CLICS CON META PIXEL
-Pixel: 2187878551800908
-=========================================
-*/
-
-function registrarClickWhatsApp(){
-
-    if(typeof fbq === "function"){
-
+  </footer>
+
+  <a
+    href="https://wa.me/5492664651893"
+    class="whatsapp-float whatsapp-link"
+    target="_blank"
+    rel="noopener"
+    aria-label="Contactar por WhatsApp"
+  >
+    ☎
+  </a>
+
+  <script>
+    const WHATSAPP_NUMBER = "5492664651893";
+
+    function registrarContacto() {
+      if (typeof fbq === "function") {
         fbq("track", "Contact");
-
         fbq("trackCustom", "ClickWhatsApp");
-
+      }
     }
 
-}
+    function abrirWhatsApp(mensaje) {
+      registrarContacto();
 
+      const url = "https://wa.me/" + WHATSAPP_NUMBER +
+        "?text=" + encodeURIComponent(mensaje);
 
-function crearWhatsAppUrl(mensaje){
-
-    return (
-        "https://wa.me/" +
-        WHATSAPP_NUMBER +
-        "?text=" +
-        encodeURIComponent(mensaje)
-    );
-
-}
-
-
-function enviarWhatsApp(){
-
-    const campoNombre =
-        document.getElementById("nombre");
-
-    const nombre =
-        campoNombre
-        ? campoNombre.value.trim()
-        : "";
-
-    let mensaje;
-
-    if(nombre){
-
-        mensaje =
-            "Hola, soy " +
-            nombre +
-            ". Quiero información para ser cajero/a de Grupo MyB.";
-
-    }else{
-
-        mensaje =
-            "Hola, quiero información para ser cajero/a de Grupo MyB.";
-
+      window.open(url, "_blank", "noopener");
     }
 
-    registrarClickWhatsApp();
+    document.getElementById("contactForm").addEventListener("submit", function(event) {
+      event.preventDefault();
 
-    const url = crearWhatsAppUrl(mensaje);
+      const nombre = document.getElementById("nombre").value.trim();
 
-    window.open(url, "_blank");
+      if (!nombre) {
+        return;
+      }
 
-}
+      const mensaje = "Hola, soy " + nombre +
+        ". Quiero información para ser cajero/a de Grupo MyB.";
 
+      abrirWhatsApp(mensaje);
+    });
 
-function enviarWhatsAppFlotante(event){
+    document.querySelectorAll(".whatsapp-link").forEach(function(link) {
+      link.addEventListener("click", function(event) {
+        event.preventDefault();
 
-    event.preventDefault();
+        const mensaje = "Hola, quiero información para ser cajero/a de Grupo MyB.";
 
-    const mensaje =
-        "Hola, quiero información para ser cajero/a de Grupo MyB.";
-
-    registrarClickWhatsApp();
-
-    const url = crearWhatsAppUrl(mensaje);
-
-    window.open(url, "_blank");
-
-}
-
-</script>
+        abrirWhatsApp(mensaje);
+      });
+    });
+  </script>
 
 </body>
-
 </html>
